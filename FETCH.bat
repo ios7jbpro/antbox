@@ -3,12 +3,7 @@
 cd C:\Users\WDAGUtilityAccount\Desktop
 curl -L -o memreduct.exe https://memreduct.org/files/memreduct-3.5.2-setup.exe
 memreduct.exe /silent
-if EXIST "C:\Program Files\Mem Reduct\memreduct.exe" (echo File exists) else (goto memreductinstall)
-curl -L -o https://raw.githubusercontent.com/ios7jbpro/antbox/refs/heads/main/memreduct.ini
-taskkill /f /im memreduct.exe
-copy memreduct.ini "C:\Program Files\Mem Reduct\memreduct.ini"
-cd "C:\Program Files\Mem Reduct"
-memreduct.exe
+if EXIST "C:\Program Files\Mem Reduct\memreduct.exe" (goto spamkill) else (goto memreductinstall)
 
 :spamkill
 taskkill /f /im StartMenuExperienceHost.exe
