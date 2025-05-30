@@ -1,0 +1,21 @@
+<Configuration>
+<vGPU>Disable</vGPU>
+<Networking>Disable</Networking>
+<AudioInput>Disable</AudioInput>
+<VideoInput>Disable</VideoInput>
+<ProtectedClient>Disable</ProtectedClient>
+<ClipboardRedirection>Disable</ClipboardRedirection>
+<MemoryInMB>581</MemoryInMB>
+<LogonCommand>
+  <Command>powershell -command "Clear-Content -Path '$env:TEMP\*' -Force"</Command>
+  <Command>taskkill /f /im StartMenuExperienceHost.exe</Command>
+  <Command>taskkill /f /im ShellExperienceHost.exe</Command>
+  <Command>taskkill /f /im explorer.exe</Command>
+  <Command>taskkill /f /im TiWorker.exe</Command>
+  <Command>taskkill /f /im spoolsv.exe</Command>
+  <Command>taskkill /f /im LSalso.exe</Command>
+  <Command>taskkill /f /im rdpclip.exe</Command>
+  <Command>taskkill /f /im WmiPrsvSE.exe</Command>
+  <Command>taskmgr.exe -d</Command>
+</LogonCommand>
+</Configuration>
